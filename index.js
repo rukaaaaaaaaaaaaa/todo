@@ -12,6 +12,7 @@ textInput.addEventListener('keydown',e=>{
     const li = document.createElement('li');
     const span = document.createElement('span');
     const button = document.createElement('button');
+    const input = document.createElement('input');
 
     li.classList.add('list-item');
     span.textContent = text;
@@ -24,6 +25,9 @@ textInput.addEventListener('keydown',e=>{
         todoList.removeChild(e.target.closest('li'));
     })
 
+    input.type = 'checkbox';
+
+    li.appendChild(input);
     li.appendChild(span);
     li.appendChild(button);
     todoList.appendChild(li);
