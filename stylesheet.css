@@ -8,7 +8,7 @@ html{
 }
 
 #text-input{
-    width: 100%;
+    width: 70%;
     height: 40px;
     margin-bottom: 30px;
     box-sizing: border-box;
@@ -25,7 +25,7 @@ html{
 .list-item{
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-bottom: 15px;
 }
 

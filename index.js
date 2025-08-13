@@ -3,9 +3,21 @@
 const textInput = document.getElementById('text-input');
 const todoList = document.getElementById('todo-list');
 
+let isComposing = false;
+
+// 日本語変換中
+textInput.addEventListener('compositionstart', () => {
+    isComposing = true;
+});
+
+// 日本語の入力確定
+textInput.addEventListener('compositionend', () => {
+    isComposing = false;
+});
+
 textInput.addEventListener('keydown',e=>{
     const text = textInput.value.trim();
-    if(text === '' || e.key !== 'Enter'){
+    if(isComposing || text === '' || e.key !== 'Enter') {
         return;
     }
 
